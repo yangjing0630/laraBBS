@@ -1,6 +1,5 @@
 // Fonts
 //@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
 // Variables
 @import "variables";
 // Bootstrap
@@ -9,7 +8,7 @@
 /* universal */
 
 body {
-  font-family: Hiragino Sans GB, "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial,sans-serif;
+  font-family: Hiragino Sans GB, "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial, sans-serif;
 }
 
 /* header */
@@ -26,8 +25,9 @@ body {
 /* Sticky footer styles */
 html {
   position: relative;
-  min-height: 100% ;
+  min-height: 100%;
 }
+
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
@@ -36,7 +36,7 @@ body {
 .footer {
   position: absolute;
   bottom: 0;
-  width: 100% ;
+  width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #000;
@@ -54,4 +54,14 @@ body {
       }
     }
   }
+}
+
+.register-page {
+
+  img.captcha {
+    margin-bottom: 0px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
 }
