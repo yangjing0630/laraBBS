@@ -6,27 +6,24 @@ class ReplyRequest extends Request
 {
     public function rules()
     {
-        switch($this->method())
-        {
+        switch ($this->method()) {
             // CREATE
-            case 'POST':
-            {
+            case 'POST': {
                 return [
+                    'content' => 'required',
                     // CREATE ROLES
                 ];
             }
             // UPDATE
             case 'PUT':
-            case 'PATCH':
-            {
+            case 'PATCH': {
                 return [
                     // UPDATE ROLES
                 ];
             }
             case 'GET':
             case 'DELETE':
-            default:
-            {
+            default: {
                 return [];
             };
         }
@@ -35,6 +32,7 @@ class ReplyRequest extends Request
     public function messages()
     {
         return [
+            'content.required' => '回复内容不能为空',
             // Validation messages
         ];
     }
