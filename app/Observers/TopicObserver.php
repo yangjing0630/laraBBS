@@ -4,6 +4,7 @@ namespace App\Observers;
 
 use App\Models\Topic;
 use App\Jobs\TranslateSlug;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 // creating, created, updating, updated, saving,
@@ -41,5 +42,9 @@ class TopicObserver
         }
     }
 
+    public function deleted(Topic $topic)
+    {
+        DB::table('replies')->where('topic_id', $topic->id)->delete();
+    }
 
 }
