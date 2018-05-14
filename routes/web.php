@@ -24,3 +24,12 @@ Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
 Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload_image');
 Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]);
 Route::resource('notifications', 'NotificationsController', ['only' => ['index']]);
+
+//Route::get('/test', function () {
+//    if (strpos($_SERVER['HTTP_USER_AGENT'], "MicroMessenger")) {
+//        echo "Hello Weixin";
+//    } else {
+//        echo 123;
+//    }
+//
+//});
